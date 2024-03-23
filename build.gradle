@@ -1,0 +1,24 @@
+buildscript {
+    repositories {
+        mavenCentral()  // Maven Central repository
+    }
+    dependencies {
+        // Add the Firebase plugin for Gradle
+        classpath 'com.google.firebase:firebase-crashlytics-gradle:2.8.1'
+        // Add the dependency for the Google services Gradle plugin
+        classpath 'com.google.gms:google-services:4.3.15'
+    }
+}
+
+plugins {
+    id 'com.android.application' version '7.3.1' apply false
+    id 'com.android.library' version '7.3.1' apply false
+}
+
+// Apply the Firebase Crashlytics plugin
+apply plugin: 'com.google.firebase.crashlytics'
+
+// Apply other plugins as needed
+
+// Apply the Google services plugin at the bottom of the file
+apply plugin: 'com.google.gms.google-services'
